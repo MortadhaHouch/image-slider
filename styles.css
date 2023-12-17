@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+img{
+    width: 800px;
+    height: 500px;
+    background-color: black;
+}
+.primary{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: none;
+    filter: grayscale(100%);
+}
+.primary.active{
+    margin: 10px;
+    border: none;
+    transform: scale(1.5);
+    transition: 0.25s;
+    filter: grayscale(0%);
+    box-shadow: 0px 0px 10px 5px rgba(128, 128, 128, 0.25);
+    border-radius: 20px;
+}
+.primary:not(.active){
+    margin: 10px;
+    border: none;
+    transform: scale(1);
+    transition: 0.25s;
+}
+div:first-child{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 150px;
+}
+div:nth-child(2){
+    position: absolute;
+    inset: auto auto 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    height: fit-content;
+}
+div:has(button){
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    gap: 10px;
+}
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 25px;
+}
+button:hover{
+    box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.25s;
+}
+button:not(:hover){
+    box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+    transition: 0.25s;
+}
